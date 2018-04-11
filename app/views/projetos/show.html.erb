@@ -1,0 +1,48 @@
+<html>
+<head>
+<style>
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+</style>
+</head>
+<table id="customers">
+  <tr>
+    <th>Nome</th>
+    <th>Matricula</th>
+    <th>Endereco</th>
+    <th>Telefone</th>
+  </tr>
+  <tr>
+    <td><%= @projeto.nome %></td>
+    <td><%= @projeto.matricula %></td>
+    <td><%= @projeto.endereco %></td>
+    <td><%= @projeto.telefone %></td>
+  </tr>
+</table>
+
+<p>
+
+<h2><%= link_to 'Editar', edit_projeto_path(@projeto) %></h2>
+<p>
+<h2><%= link_to 'Voltar', projetos_path %></h2>
+</html>
